@@ -1,7 +1,7 @@
 BREW_PATH := $(shell brew --prefix)/bin
 
 all: urls.txt
-	sed s*http://**g $< | xargs make
+	sed -E s*https?://**g $< | xargs make
 
 $(BREW_PATH)/pup:
 	brew install pup
