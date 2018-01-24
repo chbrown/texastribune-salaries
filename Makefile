@@ -21,5 +21,6 @@ urls.txt: salaries.texastribune.org $(BREW_PATH)/pup
     uniq >$@
 
 clean:
-	rm -f urls.txt
-	rm -rf salaries.texastribune.org
+	# Removing urls.txt and everything under salaries.texastribune.org/
+	rm -fv urls.txt
+	rm -rfv salaries.texastribune.org
