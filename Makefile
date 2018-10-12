@@ -7,7 +7,7 @@ $(BREW_PATH)/pup:
 	brew install pup
 
 salaries.texastribune.org:
-	wget --mirror --level=1 https://salaries.texastribune.org/agencies/
+	wget --no-config --mirror --level=1 https://salaries.texastribune.org/agencies/
 
 raw.texastribune.org.s3.amazonaws.com/%:
 	@mkdir -p $(@D)
